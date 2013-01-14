@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 # Create your views here.
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
-from django.utils.translation import ugettext_lazy as _
-from zokiguide.decorators import render_to
+from django.shortcuts import render
 
-@render_to('main/home.html')
+
 def home(request):
-	data = {}
-	return data
-
+    data = {}
+    return render(request, 'main/home.html', data)
